@@ -1,0 +1,20 @@
+{
+  "name": "infotition-next-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "clean": "rimraf lib",
+    "start": "tsc -p .&& cd lib&& node index.js",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}
