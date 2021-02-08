@@ -4,12 +4,15 @@
   "description": "Boilerplate for Next.js projects with typescript, scass, eslint, prettier and custom express server support.",
   "main": "lib/index.js",
   "types": "lib",
-  "bin": "./lib/index.js",
+  "bin": {
+    "infotition-next-boilerplate": "./lib/index.js"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "dev": "npm run clean&& tsc -p .&& cd lib&& node index.js",
     "start": "tsc -p .&& cd lib&& node index.js",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "infotition-next-boilerplate": "node index.js"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import createBoilerplate from './helpers/createBoilerplate';
 
 const args = process.argv.slice(2);

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import util from 'util';
 import childProcess from 'child_process';
 
