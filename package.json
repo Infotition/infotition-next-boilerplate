@@ -4,6 +4,7 @@
   "description": "Boilerplate for Next.js projects with typescript, scass, eslint, prettier and custom express server support.",
   "main": "lib/index.js",
   "types": "lib",
+  "bin": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
     "dev": "npm run clean&& tsc -p .&& cd lib&& node index.js",
