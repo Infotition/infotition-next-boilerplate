@@ -1,18 +1,27 @@
 {
   "name": "infotition-next-boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Boilerplate for Next.js projects with typescript, scass, eslint, prettier and custom express server support.",
-  "main": "lib/index.js",
-  "types": "lib",
+  "main": "dist/index.js",
+  "types": "dist",
   "bin": {
-    "infotition-next-boilerplate": "./lib/index.js"
+    "infotition-next-boilerplate": "./dist/index.js"
   },
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/lib",
+    "README.md",
+    "package.json",
+    "LICENSE.md"
+  ],
   "scripts": {
     "clean": "rimraf lib",
     "dev": "npm run clean&& tsc -p .&& cd lib&& node index.js",
     "start": "tsc -p .&& cd lib&& node index.js",
-    "build": "tsc -p .",
-    "infotition-next-boilerplate": "node index.js"
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
