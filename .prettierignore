@@ -2,4 +2,6 @@
 node_modules
 
 # Compiled output
-/lib
+/dist
+
+public
