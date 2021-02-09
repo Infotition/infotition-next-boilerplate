@@ -160,6 +160,10 @@ async function createBoilerplate(dir: string) {
 
   console.log(`---- building next.js project ----\n`);
   await runComnmand(dir, 'npm run build');
+
+  console.log(`---- committing first commit ----\n`);
+  await runComnmand(dir, 'git add *');
+  await runComnmand(dir, 'git commit -m "first commit"');
 }
 
 export default createBoilerplate;

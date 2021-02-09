@@ -1,6 +1,6 @@
 {
   "name": "infotition-next-boilerplate",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Boilerplate for Next.js projects with typescript, scass, eslint, prettier and custom express server support.",
   "main": "dist/index.js",
   "types": "dist",
