@@ -20,11 +20,11 @@ async function createBoilerplate(dir: string) {
   }
 
   console.log(`---- creating pages, api, public and styles folder ----\n`);
+  fs.mkdirSync(`${dir}/public`);
   fs.mkdirSync(`${dir}/src`);
   fs.mkdirSync(`${dir}/src/components`);
   fs.mkdirSync(`${dir}/src/pages`);
   fs.mkdirSync(`${dir}/src/pages/api`);
-  fs.mkdirSync(`${dir}/src/public`);
   fs.mkdirSync(`${dir}/src/styles`);
 
   console.log(`---- creating index.tsx file ----\n`);
@@ -41,6 +41,13 @@ async function createBoilerplate(dir: string) {
     () => {}
   );
 
+  console.log(`---- creating Layout.tsx file ----\n`);
+  copyfiles(
+    [`${publicDir}/Layout.tsx`, `${dir}/src/components`],
+    { up: true },
+    () => {}
+  );
+
   console.log(`---- creating globals.scss file ----\n`);
   copyfiles(
     [`${publicDir}/globals.scss`, `${dir}/src/styles`],
@@ -48,9 +55,16 @@ async function createBoilerplate(dir: string) {
     () => {}
   );
 
+  console.log(`---- creating Layout.module.scss file ----\n`);
+  copyfiles(
+    [`${publicDir}/Layout.module.scss`, `${dir}/src/styles`],
+    { up: true },
+    () => {}
+  );
+
   console.log(`---- creating favicon.ico file ----\n`);
   copyfiles(
-    [`${publicDir}/favicon.ico`, `${dir}/src/public`],
+    [`${publicDir}/favicon.ico`, `${dir}/public`],
     { up: true },
     () => {}
   );

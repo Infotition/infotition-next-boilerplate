@@ -1,4 +1,9 @@
+//* ------------------- DEPENDENCIES ------------------ *\\
+
+//* Module imports
 import { NextPage } from 'next';
+
+//* -------------------- COMPONENTS ------------------- *\\
 
 const Index: NextPage = () => (
   <div>
@@ -10,5 +15,7 @@ const Index: NextPage = () => (
     </h1>
   </div>
 );
+
+//* --------------------- EXPORTS --------------------- *\\
 
 export default Index;
