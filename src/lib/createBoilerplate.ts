@@ -20,12 +20,26 @@ async function createBoilerplate(dir: string) {
   }
 
   console.log(`---- creating pages, api, public and styles folder ----\n`);
+  fs.mkdirSync(`${dir}/.github`);
   fs.mkdirSync(`${dir}/public`);
   fs.mkdirSync(`${dir}/src`);
   fs.mkdirSync(`${dir}/src/components`);
   fs.mkdirSync(`${dir}/src/pages`);
   fs.mkdirSync(`${dir}/src/pages/api`);
   fs.mkdirSync(`${dir}/src/styles`);
+
+  console.log(`---- creating FUNDING.md file ----\n`);
+  copyfiles(
+    [`${publicDir}/FUNDING.yml`, `${dir}/.github`],
+    { up: true },
+    () => {}
+  );
+
+  console.log(`---- creating LICENSE file ----\n`);
+  copyfiles([`${publicDir}/LICENSE`, `${dir}`], { up: true }, () => {});
+
+  console.log(`---- creating README.md file ----\n`);
+  copyfiles([`${publicDir}/README.md`, `${dir}`], { up: true }, () => {});
 
   console.log(`---- creating index.tsx file ----\n`);
   copyfiles(
@@ -172,8 +186,8 @@ async function createBoilerplate(dir: string) {
   console.log(`---- initialize git repository ----\n`);
   await runComnmand(dir, 'git init');
 
-  console.log(`---- building next.js project ----\n`);
-  await runComnmand(dir, 'npm run build');
+  // console.log(`---- building next.js project ----\n`);
+  // await runComnmand(dir, 'npm run build');
 
   console.log(`---- committing first commit ----\n`);
   await runComnmand(dir, 'git add *');
